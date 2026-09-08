@@ -1,0 +1,402 @@
+@import "tailwindcss";
+
+/* =========================================================
+   VANTORA GLOBAL RECRUITMENT
+   GLOBAL BRAND THEME
+   ========================================================= */
+
+:root {
+  --vantora-orange: #E45128;
+  --vantora-dark: #1A1816;
+  --vantora-white: #FFFFFF;
+  --vantora-light: #F7F4F1;
+  --vantora-border: #E5DED8;
+  --vantora-muted: #756E68;
+}
+
+/* =========================================================
+   BASIC PAGE SETTINGS
+   ========================================================= */
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: #FFFFFF;
+  color: #1A1816;
+}
+
+/* =========================================================
+   OLD DARK BLUE -> VANTORA DARK
+   #0B1F3A
+   ========================================================= */
+
+[class*="bg-[#0B1F3A]"] {
+  background-color: #1A1816 !important;
+}
+
+[class*="text-[#0B1F3A]"] {
+  color: #1A1816 !important;
+}
+
+[class*="border-[#0B1F3A]"] {
+  border-color: #1A1816 !important;
+}
+
+[class*="hover:bg-[#0B1F3A]"]:hover {
+  background-color: #1A1816 !important;
+}
+
+[class*="hover:text-[#0B1F3A]"]:hover {
+  color: #1A1816 !important;
+}
+
+/* =========================================================
+   OLD BLUE -> VANTORA ORANGE
+   #2563EB
+   ========================================================= */
+
+[class*="bg-[#2563EB]"] {
+  background-color: #E45128 !important;
+}
+
+[class*="text-[#2563EB]"] {
+  color: #E45128 !important;
+}
+
+[class*="border-[#2563EB]"] {
+  border-color: #E45128 !important;
+}
+
+[class*="hover:bg-[#2563EB]"]:hover {
+  background-color: #E45128 !important;
+}
+
+[class*="hover:border-[#2563EB]"]:hover {
+  border-color: #E45128 !important;
+}
+
+[class*="focus:border-[#2563EB]"]:focus {
+  border-color: #E45128 !important;
+}
+
+[class*="focus:ring-[#2563EB]"]:focus {
+  --tw-ring-color: rgb(228 81 40 / 0.2) !important;
+}
+
+/* =========================================================
+   OLD GOLD -> VANTORA ORANGE
+   #D4A72C
+   ========================================================= */
+
+[class*="text-[#D4A72C]"] {
+  color: #E45128 !important;
+}
+
+[class*="bg-[#D4A72C]"] {
+  background-color: #E45128 !important;
+}
+
+[class*="border-[#D4A72C]"] {
+  border-color: #E45128 !important;
+}
+
+[class*="hover:text-[#D4A72C]"]:hover {
+  color: #E45128 !important;
+}
+
+[class*="hover:border-[#D4A72C]"]:hover {
+  border-color: #E45128 !important;
+}
+
+/* =========================================================
+   OLD LIGHT BLUE -> VANTORA ORANGE
+   #38BDF8
+   ========================================================= */
+
+[class*="text-[#38BDF8]"] {
+  color: #E45128 !important;
+}
+
+[class*="bg-[#38BDF8]"] {
+  background-color: #E45128 !important;
+}
+
+[class*="border-[#38BDF8]"] {
+  border-color: #E45128 !important;
+}
+
+[class*="hover:text-[#38BDF8]"]:hover {
+  color: #E45128 !important;
+}
+
+[class*="hover:border-[#38BDF8]"]:hover {
+  border-color: #E45128 !important;
+}
+
+/* =========================================================
+   OLD LIGHT BACKGROUND -> VANTORA LIGHT
+   #F1F5F9
+   ========================================================= */
+
+[class*="bg-[#F1F5F9]"] {
+  background-color: #F7F4F1 !important;
+}
+
+[class*="hover:bg-[#F1F5F9]"]:hover {
+  background-color: #F7F4F1 !important;
+}
+
+/* =========================================================
+   WHITE AREAS
+   Keep white, but give them the new brand feel.
+   ========================================================= */
+
+.bg-white {
+  background-color: #FFFFFF !important;
+}
+
+/* =========================================================
+   SLATE BACKGROUNDS
+   ========================================================= */
+
+.bg-slate-50 {
+  background-color: #F7F4F1 !important;
+}
+
+.bg-slate-100 {
+  background-color: #F3EFEB !important;
+}
+
+.bg-slate-200 {
+  background-color: #EDE7E2 !important;
+}
+
+.bg-slate-300 {
+  background-color: #DED6D0 !important;
+}
+
+/* =========================================================
+   SLATE TEXT
+   ========================================================= */
+
+.text-slate-900 {
+  color: #1A1816 !important;
+}
+
+.text-slate-800 {
+  color: #27221F !important;
+}
+
+.text-slate-700 {
+  color: #3F3833 !important;
+}
+
+.text-slate-600 {
+  color: #5F5751 !important;
+}
+
+.text-slate-500 {
+  color: #756E68 !important;
+}
+
+.text-slate-400 {
+  color: #918982 !important;
+}
+
+.text-slate-300 {
+  color: #C7BEB7 !important;
+}
+
+.text-slate-200 {
+  color: #DED6D0 !important;
+}
+
+/* =========================================================
+   SLATE BORDERS
+   ========================================================= */
+
+.border-slate-100 {
+  border-color: #F0EBE7 !important;
+}
+
+.border-slate-200 {
+  border-color: #E5DED8 !important;
+}
+
+.border-slate-300 {
+  border-color: #D4CCC5 !important;
+}
+
+.border-slate-400 {
+  border-color: #B9AFA7 !important;
+}
+
+/* =========================================================
+   HOVER STATES
+   ========================================================= */
+
+.hover\:bg-slate-50:hover {
+  background-color: #F7F4F1 !important;
+}
+
+.hover\:bg-slate-100:hover {
+  background-color: #F3EFEB !important;
+}
+
+.hover\:bg-slate-200:hover {
+  background-color: #EDE7E2 !important;
+}
+
+.hover\:text-slate-900:hover {
+  color: #1A1816 !important;
+}
+
+.hover\:text-slate-700:hover {
+  color: #3F3833 !important;
+}
+
+/* =========================================================
+   INPUTS / FORMS
+   ========================================================= */
+
+input,
+textarea,
+select {
+  color: #1A1816;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #918982;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline-color: #E45128;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button {
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* =========================================================
+   VANTORA BRAND UTILITY CLASSES
+   These can also be used in future components.
+   ========================================================= */
+
+.vantora-orange {
+  color: #E45128 !important;
+}
+
+.vantora-dark {
+  color: #1A1816 !important;
+}
+
+.vantora-orange-bg {
+  background-color: #E45128 !important;
+}
+
+.vantora-dark-bg {
+  background-color: #1A1816 !important;
+}
+
+.vantora-light-bg {
+  background-color: #F7F4F1 !important;
+}
+
+.vantora-border {
+  border-color: #E45128 !important;
+}
+
+/* =========================================================
+   FOOTER / DARK SECTIONS
+   ========================================================= */
+
+footer {
+  background-color: #1A1816;
+}
+
+footer a:hover {
+  color: #E45128 !important;
+}
+
+/* =========================================================
+   DARK SECTION LINKS
+   ========================================================= */
+
+.bg-\[\#1A1816\] a:hover,
+[class*="bg-[#0B1F3A]"] a:hover {
+  color: #E45128 !important;
+}
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+  background-color: #E45128;
+  color: #FFFFFF;
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F4F1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1A1816;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E45128;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
