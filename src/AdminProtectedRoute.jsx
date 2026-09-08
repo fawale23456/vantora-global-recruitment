@@ -2,16 +2,22 @@ import { useEffect, useState } from 'react'
 import { Navigate, useLocation } from 'react-router-dom'
 import { supabase } from './supabase.js'
 
+const AUTHORIZED_ADMIN_EMAILS = new Set([
+  'johndarasimi21@gmail.com',
+  'oyeomooye444@gmail.com',
+])
+
 function AdminProtectedRoute({ children }) {
   const location = useLocation()
 
   const [loading, setLoading] = useState(true)
   const [user, setUser] = useState(null)
+  const [isAdmin, setIsAdmin] = useState(false)
 
   useEffect(() => {
     let mounted = true
 
-    async function checkUser() {
+    async function checkAdminAccess() {
       try {
         const {
           data: { user: currentUser },
@@ -22,32 +28,62 @@ function AdminProtectedRoute({ children }) {
 
         if (error || !currentUser) {
           setUser(null)
-        } else {
-          setUser(currentUser)
+          setIsAdmin(false)
+          setLoading(false)
+          return
         }
 
+        const email = currentUser.email?.trim().toLowerCase() || ''
+
+        const authorized = AUTHORIZED_ADMIN_EMAILS.has(email)
+
+        setUser(currentUser)
+        setIsAdmin(authorized)
         setLoading(false)
+
+        if (!authorized) {
+          await supabase.auth.signOut()
+        }
       } catch (error) {
         console.error('Error checking admin authentication:', error)
 
         if (!mounted) return
 
         setUser(null)
+        setIsAdmin(false)
         setLoading(false)
       }
     }
 
-    checkUser()
+    checkAdminAccess()
 
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange(
-      (_event, session) => {
+      async (_event, session) => {
         if (!mounted) return
 
-        setUser(session?.user ?? null)
+        const currentUser = session?.user ?? null
+
+        if (!currentUser) {
+          setUser(null)
+          setIsAdmin(false)
+          setLoading(false)
+          return
+        }
+
+        const email = currentUser.email?.trim().toLowerCase() || ''
+
+        const authorized = AUTHORIZED_ADMIN_EMAILS.has(email)
+
+        setUser(currentUser)
+        setIsAdmin(authorized)
         setLoading(false)
-      }
+
+        if (!authorized) {
+          await supabase.auth.signOut()
+        }
+      },
     )
 
     return () => {
@@ -58,7 +94,8 @@ function AdminProtectedRoute({ children }) {
 
   /*
     Show loading screen while Supabase checks
-    whether the admin is logged in.
+    whether the current user is authenticated
+    and authorized as an administrator.
   */
   if (loading) {
     return (
@@ -77,14 +114,11 @@ function AdminProtectedRoute({ children }) {
   }
 
   /*
-    IMPORTANT:
-    Always redirect to the correct route:
-    /admin/login
-
-    NOT:
-    /adminlogin
+    Redirect users who are:
+    - not logged in, or
+    - logged in but not one of the authorized administrators.
   */
-  if (!user) {
+  if (!user || !isAdmin) {
     return (
       <Navigate
         to="/admin/login"
@@ -97,7 +131,7 @@ function AdminProtectedRoute({ children }) {
   }
 
   /*
-    User is authenticated,
+    User is authenticated and authorized,
     so allow access to the protected admin page.
   */
   return children
