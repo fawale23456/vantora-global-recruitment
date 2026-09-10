@@ -4,7 +4,7 @@ import { supabase } from './supabase.js'
 
 const AUTHORIZED_ADMIN_EMAILS = new Set([
   'johndarasimi21@gmail.com',
-  'oyeomooye444@gmail.com',
+  'support@vantoraglobalrecruitments.com',
 ])
 
 function AdminProtectedRoute({ children }) {

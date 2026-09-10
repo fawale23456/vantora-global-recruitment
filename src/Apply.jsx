@@ -681,13 +681,13 @@ function Apply() {
               <div className="mt-4 space-y-3 text-sm text-slate-300">
 
                 <a
-                  href="mailto:info@vantoraglobalrecruitment.com"
+                  href="mailto:support@vantoraglobalrecruitments.com"
                   className="flex items-center gap-2 transition hover:text-[#D4A72C]"
                 >
                   <span className="text-[#D4A72C]">✉</span>
 
                   <span className="min-w-0 whitespace-nowrap">
-                    info@vantoraglobalrecruitment.com
+                    support@vantoraglobalrecruitments.com
                   </span>
                 </a>
 

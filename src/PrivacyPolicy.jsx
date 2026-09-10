@@ -316,7 +316,7 @@ function PrivacyPolicy() {
               </p>
 
               <p className="mt-2 text-slate-600">
-                Email: info@vantoraglobalrecruitment.com
+                Email: support@vantoraglobalrecruitments.com
               </p>
             </div>
 

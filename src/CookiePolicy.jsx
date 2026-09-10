@@ -249,10 +249,10 @@ function CookiePolicy() {
               <p className="mt-2 text-slate-600">
                 Email:{' '}
                 <a
-                  href="mailto:info@vantoraglobalrecruitment.com"
+                  href="mailto:support@vantoraglobalrecruitments.com"
                   className="font-medium text-[#2563EB] hover:text-[#D4A72C]"
                 >
-                  info@vantoraglobalrecruitment.com
+                  support@vantoraglobalrecruitments.com
                 </a>
               </p>
             </div>

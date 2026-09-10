@@ -380,10 +380,10 @@ function Contact() {
                   </p>
 
                   <a
-                    href="mailto:info@vantoraglobalrecruitment.com"
+                    href="mailto:support@vantoraglobalrecruitments.com"
                     className="mt-1 block break-all text-sm text-[#2563EB] hover:text-[#0B1F3A]"
                   >
-                    info@vantoraglobalrecruitment.com
+                    support@vantoraglobalrecruitments.com
                   </a>
 
                 </div>
@@ -465,7 +465,7 @@ function Contact() {
                 </p>
 
                 <a
-                  href="mailto:info@vantoraglobalrecruitment.com?subject=Employer%20Enquiry"
+                  href="mailto:support@vantoraglobalrecruitments.com?subject=Employer%20Enquiry"
                   className="mt-4 inline-flex font-semibold text-[#2563EB] hover:text-[#0B1F3A]"
                 >
                   Talk to our team →

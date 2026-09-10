@@ -103,42 +103,43 @@ function AdminLogin() {
             LEFT SIDE - ADMIN BRANDING
         ========================================================= */}
 
-        <section className="relative hidden overflow-hidden bg-[#19120C] lg:flex">
+        <section className="relative hidden min-h-screen overflow-hidden bg-[#19120C] lg:flex">
 
           {/* Background image */}
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
               backgroundImage:
-                "url('https://images.pexels.com/photos/3184436/pexels-photo-3184436.jpeg?auto=compress&cs=tinysrgb&w=1600')",
+                "url('https://images.pexels.com/photos/5945438/pexels-photo-5945438.jpeg?cs=srgb&dl=pexels-theo-decker-5945438.jpg&fm=jpg')",
+              backgroundPosition: '72% center',
+              backgroundSize: 'cover',
             }}
           />
 
           {/* Dark overlay */}
-          <div className="absolute inset-0 bg-[#19120C]/80" />
+          <div className="absolute inset-0 bg-[#19120C]/55" />
 
-          {/* Orange overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#6A2C17]/50 via-transparent to-[#19120C]/90" />
+          {/* Soft orange brand overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#6A2C17]/45 via-transparent to-[#19120C]/85" />
+
+          {/* Subtle left-side readability layer */}
+          <div className="absolute inset-y-0 left-0 w-[72%] bg-gradient-to-r from-[#19120C]/55 via-[#19120C]/20 to-transparent" />
 
           {/* Decorative circles */}
           <div className="absolute -left-32 -top-32 h-80 w-80 rounded-full border border-[#E85A2A]/20" />
           <div className="absolute -bottom-40 -right-40 h-[500px] w-[500px] rounded-full border border-[#E85A2A]/10" />
 
-          <div className="relative z-10 flex min-h-screen w-full flex-col justify-between p-10 xl:p-16">
+          <div className="relative z-10 flex min-h-screen w-full flex-col justify-between p-8 sm:p-10 xl:p-14">
 
-            {/* Logo */}
+            {/* =====================================================
+                DESKTOP BRANDING
+                Logo intentionally removed from desktop view
+            ===================================================== */}
+
             <div>
-              <Link to="/" className="inline-block">
-                <img
-                  src={vantoraLogo}
-                  alt="Vantora Global Recruitment"
-                  className="h-20 w-auto object-contain"
-                />
-              </Link>
+              <div className="mt-2 h-1 w-16 rounded-full bg-[#E85A2A]" />
 
-              <div className="mt-8 h-1 w-16 bg-[#E85A2A]" />
-
-              <div className="mt-6 flex items-center gap-5 text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
+              <div className="mt-6 flex items-center gap-4 text-xs font-semibold uppercase tracking-[0.3em] text-white/65">
                 <span>People</span>
                 <span className="text-[#E85A2A]">|</span>
                 <span>Opportunities</span>
@@ -147,22 +148,24 @@ function AdminLogin() {
               </div>
             </div>
 
-            {/* Main branding */}
+            {/* =====================================================
+                MAIN BRANDING
+            ===================================================== */}
+
             <div className="max-w-2xl">
 
               <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#E85A2A]">
                 Vantora Administration
               </p>
 
-              <h1 className="mt-7 text-5xl font-bold leading-[1.05] tracking-tight text-white xl:text-6xl">
+              <h1 className="mt-7 max-w-xl text-5xl font-bold leading-[1.02] tracking-tight text-white xl:text-6xl">
                 Find the opportunity,
-
-                <span className="block text-[#E85A2A]">
+                <span className="mt-2 block text-[#E85A2A]">
                   build the right team.
                 </span>
               </h1>
 
-              <p className="mt-7 max-w-xl text-lg leading-8 text-white/65">
+              <p className="mt-7 max-w-xl text-base leading-7 text-white/75 xl:text-lg xl:leading-8">
                 Manage your recruitment platform, applications, enquiries
                 and opportunities from one secure administration dashboard.
               </p>
@@ -170,8 +173,9 @@ function AdminLogin() {
               {/* Feature list */}
               <div className="mt-10 space-y-5">
 
+                {/* Manage Vacancies */}
                 <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#E85A2A]">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/10 text-[#E85A2A] backdrop-blur-sm">
                     <svg
                       className="h-5 w-5"
                       fill="none"
@@ -191,14 +195,16 @@ function AdminLogin() {
                     <p className="font-semibold text-white">
                       Manage Vacancies
                     </p>
+
                     <p className="mt-1 text-sm text-white/50">
                       Create, edit and manage job opportunities.
                     </p>
                   </div>
                 </div>
 
+                {/* Review Applications */}
                 <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#E85A2A]">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/10 text-[#E85A2A] backdrop-blur-sm">
                     <svg
                       className="h-5 w-5"
                       fill="none"
@@ -218,14 +224,16 @@ function AdminLogin() {
                     <p className="font-semibold text-white">
                       Review Applications
                     </p>
+
                     <p className="mt-1 text-sm text-white/50">
                       Track candidates throughout the recruitment process.
                     </p>
                   </div>
                 </div>
 
+                {/* Manage Enquiries */}
                 <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#E85A2A]">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/10 text-[#E85A2A] backdrop-blur-sm">
                     <svg
                       className="h-5 w-5"
                       fill="none"
@@ -245,6 +253,7 @@ function AdminLogin() {
                     <p className="font-semibold text-white">
                       Manage Enquiries
                     </p>
+
                     <p className="mt-1 text-sm text-white/50">
                       Stay on top of messages from candidates and employers.
                     </p>
@@ -272,7 +281,7 @@ function AdminLogin() {
           {/* Top navigation */}
           <div className="flex items-center justify-between px-5 py-6 sm:px-8 lg:px-10">
 
-            {/* Mobile logo */}
+            {/* Mobile logo - KEPT */}
             <Link
               to="/"
               className="flex items-center lg:hidden"

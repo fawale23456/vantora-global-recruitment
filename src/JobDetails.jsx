@@ -492,10 +492,10 @@ function JobDetails() {
                   </svg>
 
                   <a
-                    href="mailto:info@vantoraglobalrecruitment.com"
+                    href="mailto:support@vantoraglobalrecruitments.com"
                     className="break-all hover:text-white"
                   >
-                    info@vantoraglobalrecruitment.com
+                    support@vantoraglobalrecruitments.com
                   </a>
 
                 </div>

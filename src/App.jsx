@@ -319,7 +319,7 @@ function Home() {
 
               <input
                 type="text"
-                placeholder="e.g. Lagos, Nigeria"
+                placeholder="e.g. New York, USA"
                 className="w-full rounded-lg border border-[#3A322D] bg-[#1A1816] px-4 py-3 text-sm text-[#F7F3EF] outline-none transition placeholder:text-[#817870] focus:border-[#E45128] focus:ring-2 focus:ring-[#E45128]/20"
               />
 
@@ -536,17 +536,17 @@ function Home() {
             {[
               {
                 title: 'Civil Engineer',
-                location: 'Lagos, Nigeria',
+                location: 'Houston, USA',
                 type: 'Full Time',
               },
               {
                 title: 'Project Manager',
-                location: 'Lagos, Nigeria',
+                location: 'New York, USA',
                 type: 'Full Time',
               },
               {
                 title: 'Financial Analyst',
-                location: 'Lagos, Nigeria',
+                location: 'Chicago, USA',
                 type: 'Full Time',
               },
             ].map((job) => (
